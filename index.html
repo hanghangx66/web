@@ -105,7 +105,8 @@
       .offer-container {
         flex-direction: row;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
+        gap: 60px;
       }
     }
 
@@ -116,17 +117,19 @@
     }
 
     .offer-left img {
-      width: 350px;
-      max-width: 90%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      object-fit: contain;
     }
 
     .offer-right {
       flex: 1;
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 25px;
+      border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       max-width: 400px;
       text-align: left;
@@ -193,7 +196,7 @@
 
     .progress-fill {
       height: 100%;
-      width: 95%; /* 238/250 */
+      width: 95%;
       background: linear-gradient(90deg, #ff4b2b, #ff0000);
       text-align: right;
       color: white;
@@ -217,7 +220,7 @@
 </head>
 
 <body>
-  <!-- 第一段：影片與倒數 -->
+  <!-- 第一段 -->
   <div class="top-section">
     <div class="header">⇊行行股票心法班⇊</div>
 
@@ -228,37 +231,29 @@
     </div>
 
     <div class="countdown">
-      <div class="count-box">
-        <div id="hours">00</div>
-        <div class="label">HOUR</div>
-      </div>
-      <div class="count-box">
-        <div id="minutes">00</div>
-        <div class="label">MINUTES</div>
-      </div>
-      <div class="count-box">
-        <div id="seconds">00</div>
-        <div class="label">SECONDS</div>
-      </div>
+      <div class="count-box"><div id="hours">00</div><div class="label">HOUR</div></div>
+      <div class="count-box"><div id="minutes">00</div><div class="label">MINUTES</div></div>
+      <div class="count-box"><div id="seconds">00</div><div class="label">SECONDS</div></div>
     </div>
 
     <h2>倒計時結束後</h2>
     <h3>優惠將結束！</h3>
   </div>
 
-  <!-- 第二段：優惠內容 -->
+  <!-- 第二段 -->
   <div id="offer" class="offer-section">
     <h1>
-      如何在<span class="highlight">1個月內</span>建立一個自動化年賺<span class="highlight">六位數</span>的投資系統？
+      如何在<span class="highlight">1個月內</span>建立一個自動化年賺
+      <span class="highlight">六位數</span>的投資系統？
     </h1>
 
     <div class="offer-container">
       <!-- 左邊圖片 -->
       <div class="offer-left">
-        <img src="messageImage_1762760474287.jpg" alt="投資課程示意圖">
+        <img src="assets/messageImage_1762760474287.jpg" alt="投資課程示意圖">
       </div>
 
-      <!-- 右邊文字 -->
+      <!-- 右邊內容 -->
       <div class="offer-right">
         <ul>
           <li>小資金族</li>
@@ -278,35 +273,23 @@
     </div>
 
     <div class="progress-section">
-      <p>
-        優惠名額只有<span class="highlight">250</span>名<br>
-        滿額後價格將回到原價：1,888 USD
-      </p>
-
-      <div class="progress-bar">
-        <div class="progress-fill">238 / 250</div>
-      </div>
-
+      <p>優惠名額只有<span class="highlight">250</span>名<br>滿額後價格將回到原價：1,888 USD</p>
+      <div class="progress-bar"><div class="progress-fill">238 / 250</div></div>
       <a href="https://你的連結網址" target="_blank" class="bottom-btn">把握機會，立即開始學習</a>
     </div>
   </div>
 
   <script>
-    // 倒數計時 1 小時
     const countdownTime = new Date().getTime() + (1 * 60 * 60 * 1000);
-
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownTime - now;
-
       const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((distance / (1000 * 60)) % 60);
       const seconds = Math.floor((distance / 1000) % 60);
-
       document.getElementById('hours').textContent = String(hours).padStart(2, '0');
       document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
       document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
       if (distance < 0) {
         clearInterval(timer);
         document.getElementById('hours').textContent = "00";
