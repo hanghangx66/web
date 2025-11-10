@@ -98,6 +98,7 @@
       flex-direction: column;
       align-items: center;
       gap: 30px;
+      margin-top: 30px;
     }
 
     @media(min-width: 900px) {
@@ -108,14 +109,21 @@
       }
     }
 
+    .offer-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
     .offer-left img {
       width: 350px;
-      max-width: 90vw;
+      max-width: 90%;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .offer-right {
+      flex: 1;
       background: #fff;
       padding: 20px;
       border-radius: 10px;
@@ -151,13 +159,13 @@
     }
 
     .btn {
+      display: inline-block;
       background-color: #e62222;
       color: #fff;
       font-weight: bold;
-      border: none;
+      text-decoration: none;
       padding: 15px 25px;
       border-radius: 8px;
-      cursor: pointer;
       margin-top: 10px;
       animation: swing 2s infinite ease-in-out;
     }
@@ -195,26 +203,27 @@
     }
 
     .bottom-btn {
+      display: inline-block;
       background-color: #ff2c2c;
       color: #fff;
       font-weight: bold;
+      text-decoration: none;
       padding: 18px 30px;
-      border: none;
       border-radius: 8px;
       margin-top: 30px;
       animation: swing 2s infinite ease-in-out;
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- 第一段：影片與倒數 -->
   <div class="top-section">
     <div class="header">⇊行行股票心法班⇊</div>
 
     <div class="video-section">
       <iframe src="https://www.youtube.com/embed/VoIBecCM34U?autoplay=1&mute=1"
-  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div class="note">⇈ 點擊上方影片框觀看課程 ⇈</div>
     </div>
 
@@ -239,11 +248,17 @@
 
   <!-- 第二段：優惠內容 -->
   <div id="offer" class="offer-section">
-    <h1>如何在<span class="highlight">1個月內</span>建立一個自動化年賺<span class="highlight">六位數</span>的投資系統？</h1>
+    <h1>
+      如何在<span class="highlight">1個月內</span>建立一個自動化年賺<span class="highlight">六位數</span>的投資系統？
+    </h1>
+
     <div class="offer-container">
+      <!-- 左邊圖片 -->
       <div class="offer-left">
         <img src="assets/course-placeholder.jpg" alt="投資課程示意圖">
       </div>
+
+      <!-- 右邊文字 -->
       <div class="offer-right">
         <ul>
           <li>小資金族</li>
@@ -251,20 +266,27 @@
           <li>略懂金融知識</li>
           <li>在股市常虧損</li>
         </ul>
+
         <div class="price">
-          <del>原價：1288 USD</del>
+          <del>原價：1888 USD</del>
           <span class="highlight">限時優惠價：998 USD</span>
         </div>
+
         <a href="https://你的連結網址" target="_blank" class="btn">立即開始學習 21% OFF</a>
-        <p style="font-size: 0.8em; color: #333;">一次性付費，永久會員，終身諮詢</p>
+        <p style="font-size: 0.8em; color: #333;">一次付費，終身會員，永久觀看</p>
       </div>
     </div>
 
     <div class="progress-section">
-      <p>優惠名額只有<span class="highlight">250</span>名<br>滿額後價格將回到原價：1,888 USD</p>
+      <p>
+        優惠名額只有<span class="highlight">250</span>名<br>
+        滿額後價格將回到原價：1,888 USD
+      </p>
+
       <div class="progress-bar">
         <div class="progress-fill">238 / 250</div>
       </div>
+
       <a href="https://你的連結網址" target="_blank" class="bottom-btn">把握機會，立即開始學習</a>
     </div>
   </div>
@@ -290,11 +312,9 @@
         document.getElementById('hours').textContent = "00";
         document.getElementById('minutes').textContent = "00";
         document.getElementById('seconds').textContent = "00";
-        // 滾動到優惠區
         document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
       }
     }, 1000);
   </script>
-
 </body>
 </html>
