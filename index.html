@@ -15,7 +15,6 @@
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #fff;
       text-align: center;
-      scroll-behavior: smooth;
     }
 
     /* 上半部白底 */
@@ -89,50 +88,53 @@
     /* 第二段（優惠區） */
     .offer-section {
       background-color: #e8d8f5;
-      padding: 60px 0;
-      text-align: center;
+      padding: 80px 0;
     }
 
     .offer-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
-      margin-top: 30px;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
     }
 
-    @media(min-width: 900px) {
+    /* 桌機版左右排 */
+    @media (min-width: 992px) {
       .offer-container {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 60px;
       }
     }
 
-    .offer-left {
+    .offer-left, .offer-right {
       flex: 1;
+      max-width: 500px;
+    }
+
+    .offer-left {
       display: flex;
       justify-content: center;
     }
 
     .offer-left img {
       width: 100%;
-      max-width: 420px;
       height: auto;
+      max-width: 460px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
       object-fit: contain;
     }
 
     .offer-right {
-      flex: 1;
       background: #fff;
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 400px;
       text-align: left;
+      margin: 0 auto;
     }
 
     ul {
@@ -161,7 +163,7 @@
       font-weight: 700;
     }
 
-    .btn {
+    .btn, .bottom-btn {
       display: inline-block;
       background-color: #e62222;
       color: #fff;
@@ -171,6 +173,7 @@
       border-radius: 8px;
       margin-top: 10px;
       animation: swing 2s infinite ease-in-out;
+      text-align: center;
     }
 
     @keyframes swing {
@@ -179,7 +182,7 @@
     }
 
     .progress-section {
-      margin-top: 40px;
+      margin-top: 50px;
       text-align: center;
     }
 
@@ -203,18 +206,6 @@
       padding-right: 10px;
       font-size: 0.8em;
       line-height: 25px;
-    }
-
-    .bottom-btn {
-      display: inline-block;
-      background-color: #ff2c2c;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 18px 30px;
-      border-radius: 8px;
-      margin-top: 30px;
-      animation: swing 2s infinite ease-in-out;
     }
   </style>
 </head>
@@ -242,18 +233,15 @@
 
   <!-- 第二段 -->
   <div id="offer" class="offer-section">
-    <h1>
-      如何在<span class="highlight">1個月內</span>建立一個自動化年賺
-      <span class="highlight">六位數</span>的投資系統？
-    </h1>
+    <h1>如何在<span class="highlight">1個月內</span>建立一個自動化年賺<span class="highlight">六位數</span>的投資系統？</h1>
 
     <div class="offer-container">
-      <!-- 左邊圖片 -->
+      <!-- 左圖 -->
       <div class="offer-left">
         <img src="assets/messageImage_1762760474287.jpg" alt="投資課程示意圖">
       </div>
 
-      <!-- 右邊內容 -->
+      <!-- 右文 -->
       <div class="offer-right">
         <ul>
           <li>小資金族</li>
