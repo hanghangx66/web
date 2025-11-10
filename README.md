@@ -74,7 +74,7 @@
 
   <div class="video-section">
     <!-- 把下面的 YouTube 影片 ID 換成你自己的 -->
-    <iframe src="https://www.youtube.com/watch?v=VoIBecCM34U?autoplay=1&mute=1" 
+    <iframe src="https://www.youtube.com/watch?v=VoIBecCM34Uautoplay=1&mute=1" 
       allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div class="note">⇈ 點擊上方影片框觀看課程 ⇈</div>
   </div>
