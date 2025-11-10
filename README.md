@@ -75,7 +75,7 @@
 
   <div class="video-section">
     <!-- 將下面 src 換成你的 YouTube 影片 ID，例如 https://www.youtube.com/watch?v=dQw4w9WgXcQ -->
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/watch?v=VoIBecCM34U&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div class="note">⇈ 點擊上方影片觀看投資班 ⇈</div>
   </div>
 
