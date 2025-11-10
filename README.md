@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -14,7 +13,7 @@
     }
 
     .header {
-      background-color: #ffe500;
+      background-color: #ffeb00;
       color: #000;
       font-weight: 700;
       padding: 20px 0;
@@ -74,9 +73,10 @@
   <div class="header">⇊行行股票心法班⇊</div>
 
   <div class="video-section">
-    <!-- 將下面 src 換成你的 YouTube 影片 ID，例如 https://www.youtube.com/watch?v=dQw4w9WgXcQ -->
-    <iframe src="https://www.youtube.com/watch?v=VoIBecCM34U&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <div class="note">⇈ 點擊上方影片觀看投資班 ⇈</div>
+    <!-- 把下面的 YouTube 影片 ID 換成你自己的 -->
+    <iframe src="https://www.youtube.com/watch?v=VoIBecCM34U?autoplay=1&mute=1" 
+      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="note">⇈ 點擊上方影片框觀看課程 ⇈</div>
   </div>
 
   <div class="countdown">
@@ -94,11 +94,12 @@
     </div>
   </div>
 
-  <h2>倒數結束後</h2>
-  <h2>將失去優惠</h2>
+  <h2>倒計時結束後</h2>
+<h3 style="color:red; font-weight:700; margin-top:5px;">優惠將結束！</h3>
+
 
   <script>
-    // 設定倒數計時（例如 1 小時後結束）
+    // 倒數一小時後自動跳轉
     const countdownTime = new Date().getTime() + (1 * 60 * 60 * 1000);
 
     const timer = setInterval(() => {
@@ -115,7 +116,8 @@
 
       if (distance < 0) {
         clearInterval(timer);
-        document.querySelector('.countdown').innerHTML = '<h3>時間到！</h3>';
+        // 倒數結束後自動跳轉下一頁（改成你自己的頁面名稱或網址）
+        window.location.href = "offer.html";
       }
     }, 1000);
   </script>
