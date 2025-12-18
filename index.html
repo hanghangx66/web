@@ -1,651 +1,435 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>行行股票心法班</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Noto Sans TC', sans-serif;
-      background-color: #fff;
-      text-align: center;
-    }
-
-    /* 上半部白底 */
-    .top-section {
-      background-color: #ffffff;
-      padding-bottom: 50px;
-    }
-
-    .header {
-      background-color: #ffeb00;
-      color: #000;
-      font-weight: 700;
-      padding: 20px 0;
-      font-size: 1.5em;
-    }
-
-    .video-section {
-      background: #000;
-      padding: 40px 0;
-    }
-
-    iframe {
-      width: 80%;
-      max-width: 800px;
-      height: 450px;
-      border-radius: 10px;
-      border: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .note {
-      color: red;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    /* 倒數計時 */
-    .countdown {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .count-box {
-      background-color: #d11a1a;
-      color: white;
-      font-weight: bold;
-      padding: 20px;
-      border-radius: 8px;
-      min-width: 80px;
-    }
-
-    .label {
-      font-size: 0.8em;
-      color: #fff;
-      margin-top: 5px;
-    }
-
-    h2 {
-      margin-top: 20px;
-      font-weight: 700;
-    }
-
-    h3 {
-      margin-top: 10px;
-      color: red;
-      font-weight: bold;
-    }
-
-    /* 第二段（優惠區） */
-    .offer-section {
-      background-color: #e8d8f5;
-      padding: 80px 0;
-    }
-
-    .offer-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
-    }
-
-    /* 桌機版左右排 */
-    @media (min-width: 992px) {
-      .offer-container {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    .offer-left, .offer-right {
-      flex: 1;
-      max-width: 500px;
-    }
-
-    .offer-left {
-      display: flex;
-      justify-content: center;
-    }
-
-    .offer-left img {
-      width: 100%;
-      height: auto;
-      max-width: 460px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      object-fit: contain;
-    }
-
-    .offer-right {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: left;
-      margin: 0 auto;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li::before {
-      content: '✔';
-      color: green;
-      margin-right: 8px;
-    }
-
-    .price {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
-
-    .price del {
-      color: gray;
-      margin-right: 10px;
-    }
-
-    .highlight {
-      color: red;
-      font-weight: 700;
-    }
-
-    .btn, .bottom-btn {
-      display: inline-block;
-      background-color: #e62222;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 15px 25px;
-      border-radius: 8px;
-      margin-top: 10px;
-      animation: swing 2s infinite ease-in-out;
-      text-align: center;
-    }
-
-    @keyframes swing {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(5px); }
-    }
-
-    .progress-section {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .progress-bar {
-      width: 80%;
-      max-width: 500px;
-      height: 25px;
-      background-color: #ddd;
-      border-radius: 20px;
-      overflow: hidden;
-      margin: 0 auto;
-      box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 95%;
-      background: linear-gradient(90deg, #ff4b2b, #ff0000);
-      text-align: right;
-      color: white;
-      padding-right: 10px;
-      font-size: 0.8em;
-      line-height: 25px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行行行銷 - 打造百萬不露臉 YouTube 數位資產</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .logo-font {
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body>
-  <!-- 第一段 -->
-  <div class="top-section">
-    <div class="header">⇊行行股票心法班⇊</div>
-
-    <div class="video-section">
-      <iframe src="https://www.youtube.com/embed/VoIBecCM34U?autoplay=1&mute=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <div class="note">⇈ 點擊上方影片框觀看課程 ⇈</div>
-    </div>
-
-    <div class="countdown">
-      <div class="count-box"><div id="hours">00</div><div class="label">HOUR</div></div>
-      <div class="count-box"><div id="minutes">00</div><div class="label">MINUTES</div></div>
-      <div class="count-box"><div id="seconds">00</div><div class="label">SECONDS</div></div>
-    </div>
-
-    <h2>倒計時結束後</h2>
-    <h3>優惠將結束！</h3>
-  </div>
-
-  <!-- 第二段 -->
-  <div id="offer" class="offer-section">
-    <h1>如何在<span class="highlight">1個月內</span>建立一個全年自動運行<span class="highlight">六位數收益</span>的投資系統？</h1>
-
-    <div class="offer-container">
-      <!-- 左圖 -->
-      <div class="offer-left">
-        <img src="assets/messageImage_1762760474287.jpg" alt="投資課程示意圖">
-      </div>
-
-      <!-- 右文 -->
-      <div class="offer-right">
-        <ul>
-          <li>小資金族</li>
-          <li>定性不足</li>
-          <li>略懂金融知識</li>
-          <li>在股市常虧損</li>
-        </ul>
-
-        <div class="price">
-          <del>原價：1888 USD</del>
-          <span class="highlight">限時優惠價：998 USD</span>
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                    <span class="text-2xl logo-font text-slate-900 italic">行行行銷</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-amber-500 font-medium transition">關於創辦人</a>
+                    <a href="#method" class="hover:text-amber-500 font-medium transition">獲利策略</a>
+                    <a href="#curriculum" class="hover:text-amber-500 font-medium transition">課程規劃</a>
+                    <a href="#pricing" class="bg-amber-500 text-white px-6 py-2 rounded-full font-bold hover:bg-amber-600 shadow-md transition">開始打造數位資產</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <a href="https://buy.stripe.com/aEUcNf0D84A5cmsfZ1" target="_blank" class="btn">立即開始學習 21% OFF</a>
-        <p style="font-size: 0.8em; color: #333;">一次付費，終身會員，永久觀看</p>
-      </div>
-    </div>
-
-    <div class="progress-section">
-      <p>優惠名額只有<span class="highlight">200</span>名<br>滿額後價格將回到原價：1,888 USD</p>
-      <div class="progress-bar"><div class="progress-fill">197 / 200</div></div>
-      <a href="https://buy.stripe.com/aEUcNf0D84A5cmsfZ1" target="_blank" class="bottom-btn">把握機會，立即開始學習</a>
-    </div>
-  </div>
-
-  <script>
-    const countdownTime = new Date().getTime() + (1 * 60 * 60 * 1000);
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countdownTime - now;
-      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((distance / (1000 * 60)) % 60);
-      const seconds = Math.floor((distance / 1000) % 60);
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById('hours').textContent = "00";
-        document.getElementById('minutes').textContent = "00";
-        document.getElementById('seconds').textContent = "00";
-        document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 1000);
-  </script>
-  <!-- 第三段：投資前要問自己的問題 -->
-<section id="questions" style="background:#fff; padding:80px 20px; text-align:center;">
-  <h2 style="color:#1a1446; font-size:2em; font-weight:800; margin-bottom:40px;">投資前問自己幾個問題</h2>
-
-  <div style="max-width:800px; margin:0 auto; text-align:left; font-size:1.2em; line-height:1.8em;">
-    <ul style="list-style:none; padding:0;">
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 開啟投資之路的第一步</li>
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 從圖表讀懂市場漲跌趨勢</li>
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 精準挑出暴漲潛力股，抓住快速獲利機會</li>
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 找準買賣節奏，掌握止盈與止損的最佳時機</li>
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 提高容錯率，同時追求更高的利潤</li>
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 建立系統化的股票交易流程</li>
-      <li style="margin-bottom:12px;"><span style="color:#e60000; font-weight:bold;">❓</span> 讓投資自動化，釋放更多時間</li>
-    </ul>
-  </div>
-</section>
-<!-- 第四段：真實績效展示 -->
-<section id="results" style="background-color:#111; color:white; padding:80px 20px; text-align:center;">
-  <div style="max-width:1100px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:40px;">
-
-    <h2 style="font-size:2em; font-weight:800; color:#ffcc00; margin-bottom:10px;">
-      真實操作績效成果
-    </h2>
-    <p style="font-size:1.2em; color:#ddd;">以下為全自動化投資系統於2024年的實際獲利成果</p>
-
-    <div style="display:flex; flex-direction:column; gap:30px; width:100%; justify-content:center; align-items:center;">
-      <!-- 電腦端顯示左右排 -->
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px;">
-
-        <!-- 左圖 -->
-        <div style="flex:1; min-width:280px;">
-          <img src="assets/messageImage_1762761969116.jpg" alt="績效分析圖" style="width:100%; max-width:400px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-6 space-y-2 border-t">
+            <a href="#about" class="block py-3 px-4 text-gray-700 hover:bg-amber-50 rounded-lg">關於創辦人</a>
+            <a href="#method" class="block py-3 px-4 text-gray-700 hover:bg-amber-50 rounded-lg">獲利策略</a>
+            <a href="#curriculum" class="block py-3 px-4 text-gray-700 hover:bg-amber-50 rounded-lg">課程規劃</a>
+            <a href="#pricing" class="block py-4 px-4 bg-amber-500 text-white text-center rounded-xl font-bold">立即開始</a>
         </div>
+    </nav>
 
-        <!-- 右邊說明 -->
-        <div style="flex:1; min-width:300px; text-align:left; max-width:500px;">
-          <h3 style="font-size:1.5em; color:#fff;">2024我在全自動系統的幫助下</h3>
-          <p style="font-size:1.3em; font-weight:bold; color:#ffcc00;">淨賺了105,000美金（約3,150,000台幣）</p>
-          <p style="color:#ccc;">在不盯盤、不爆倉的狀況下：</p>
-
-          <div style="background:#fff; color:#000; padding:20px; border-radius:10px; margin:20px 0; text-align:center;">
-            <h4 style="font-size:1.2em; font-weight:bold;">Performance</h4>
-            <p style="font-size:1.1em; margin:5px 0;">Cumulative Return (USD): <span style="color:#008000;">+41,225.78</span></p>
-            <p style="font-size:1.1em; margin:5px 0;">Time-Weighted Return: <span style="color:#008000;">+6.52%</span></p>
-          </div>
-
-          <p style="font-size:1.3em; font-weight:bold; background:#8b4513; color:#fff; display:inline-block; padding:10px 20px; border-radius:5px;">
-            獲利41,000美金 ≈ 約台幣1,230,000元
-          </p>
+    <!-- Hero Section -->
+    <section class="pt-28 md:pt-36 pb-20 md:pb-32 gradient-bg text-white overflow-hidden relative border-b-8 border-amber-500">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center relative z-10">
+            <div class="w-full md:w-3/5 text-center md:text-left mb-12 md:mb-0">
+                <div class="inline-block px-4 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm font-bold mb-4">
+                    🔥 2024 全新「不露臉頻道」獲利藍圖
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+                    教你打造「睡後收入」<br class="hidden md:block">
+                    <span class="text-amber-500 tracking-wide">YouTube 數位資產</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                    不需露臉、不需昂貴器材。我將分享如何透過建立不露臉頻道，<br class="hidden md:block">
+                    在 24 小時不間斷地創造百萬被動收入，讓機器為你賺錢。
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <a href="#pricing" class="accent-gradient text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition shadow-2xl text-center">
+                        立即學習百萬課程
+                    </a>
+                    <a href="https://www.youtube.com/@%E8%A1%8C%E8%A1%8C%E8%A1%8C%E9%8A%B7" target="_blank" class="bg-white/10 border border-white/20 backdrop-blur-sm px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition text-center">
+                        觀看 YouTube 免費教學
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-2/5">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-slate-800 rounded-2xl overflow-hidden shadow-2xl aspect-video md:aspect-square flex items-center justify-center border border-white/10">
+                        <!-- 【重要：請在此更換主視覺圖片 URL】 -->
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="行行行銷頻道示意" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- 創辦人介紹 -->
+    <section id="about" class="pt-12 pb-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 shadow-inner border border-gray-100">
+                <div class="w-full md:w-1/3">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-amber-500 rounded-2xl rotate-3"></div>
+                        <!-- 【重要：請在此更換你的個人頭像或代表圖 URL】 -->
+                        <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                             alt="行行行銷創辦人" 
+                             class="relative rounded-2xl shadow-xl w-full aspect-square object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-black mb-8 flex items-center text-slate-900">
+                        <span class="w-8 h-1 bg-amber-500 mr-4"></span>
+                        我是行行行銷的行行
+                    </h2>
+                    <div class="space-y-6 text-slate-700 font-medium">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm"><i class="fas fa-video"></i></div>
+                            <p class="text-lg">💰 YouTube <strong>《行行行銷》</strong> 頻道創辦人</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm"><i class="fas fa-chart-line"></i></div>
+                            <p class="text-lg">📈 打造<strong>不露臉頻道</strong>創造百萬被動收入</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm"><i class="fas fa-bed"></i></div>
+                            <p class="text-lg">🎬 教你打造<strong>睡後收入數位資產</strong></p>
+                        </div>
+                    </div>
+                    <div class="mt-10 p-6 border-l-8 border-amber-500 bg-slate-900 text-white rounded-r-2xl shadow-lg">
+                        <p class="text-xl font-bold leading-relaxed italic">
+                            「最好的投資是投資自己的大腦，最好的資產是不用工作也能賺錢的系統。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 獲利策略區域 -->
+    <section id="method" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-black mb-16 text-slate-900 italic underline decoration-amber-500 underline-offset-8">為什麼不露臉也能賺錢？</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-10 bg-slate-900 text-white rounded-[2rem] shadow-2xl card-hover relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 accent-gradient rounded-xl flex items-center justify-center text-xl font-black">01</div>
+                    <i class="fas fa-mask text-4xl text-amber-500 mb-6"></i>
+                    <h4 class="text-2xl font-bold mb-4">隱私保護無壓力</h4>
+                    <p class="text-gray-400 leading-relaxed">不需要出鏡，不用擔心外界眼光。讓內容成為你的發言人，專注於價值產出。</p>
+                </div>
+                <div class="p-10 bg-slate-900 text-white rounded-[2rem] shadow-2xl card-hover relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 accent-gradient rounded-xl flex items-center justify-center text-xl font-black">02</div>
+                    <i class="fas fa-robot text-4xl text-amber-500 mb-6"></i>
+                    <h4 class="text-2xl font-bold mb-4">AI 工作流自動化</h4>
+                    <p class="text-gray-400 leading-relaxed">善用當前最強 AI 工具，從腳本、配音到剪輯，一個人也能跑出一個團隊的效率。</p>
+                </div>
+                <div class="p-10 bg-slate-900 text-white rounded-[2rem] shadow-2xl card-hover relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 accent-gradient rounded-xl flex items-center justify-center text-xl font-black">03</div>
+                    <i class="fas fa-coins text-4xl text-amber-500 mb-6"></i>
+                    <h4 class="text-2xl font-bold mb-4">24 小時複利收益</h4>
+                    <p class="text-gray-400 leading-relaxed">每一部上傳的影片都是你派出去的業務員。不分晝夜為你捕捉流量與收益。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課程規劃 (補齊第1-8階段) -->
+    <section id="curriculum" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-slate-900 mb-4">完整課程大綱</h2>
+                <p class="text-gray-500">從 0 到 100，手把手帶你建構百萬數位資產</p>
+                <div class="w-24 h-2 bg-amber-500 mx-auto rounded-full mt-4"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- 階段 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(1)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">01</span> 精準選題與市場藍海</span>
+                        <i id="icon-1" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-1" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 如何利用數據分析找到高單價 CPM 市場<br>
+                        • 解析 2024 年最賺錢的不露臉利基領域<br>
+                        • 品牌命名與頻道視覺包裝 SOP
+                    </div>
+                </div>
+
+                <!-- 階段 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(2)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">02</span> 高效 AI 內容自動化生成</span>
+                        <i id="icon-2" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-2" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 運用 AI 工具 10 分鐘產出高質量腳本<br>
+                        • 無版權素材庫深度應用與避坑指南<br>
+                        • 快速剪輯套路，一人管理 5 個頻道不是夢
+                    </div>
+                </div>
+
+                <!-- 階段 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(3)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">03</span> 流量爆發關鍵：高點擊封面與標題心理學</span>
+                        <i id="icon-3" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-3" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 破解人類好奇心：讓路人忍不住點擊的標題公式<br>
+                        • 無需設計背景：用 AI 快速生成高質感縮圖 (Thumbnail)<br>
+                        • 封面與標題的黃金組合：如何提升 CTR 至 10% 以上<br>
+                        • 實戰案例拆解：為什麼這張圖能帶來百萬流量？
+                    </div>
+                </div>
+
+                <!-- 階段 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(4)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">04</span> 演算法底層邏輯：讓系統主動為你推流</span>
+                        <i id="icon-4" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-4" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • YouTube 推薦機制解密：標籤、SEO 與權重分配<br>
+                        • 從 0 到 1 的冷啟動策略：新頻道如何快速獲得初始流量<br>
+                        • 長尾關鍵字佈局：讓你的影片成為永久被搜尋的資產<br>
+                        • 黃金 24 小時操作法：發片後的關鍵推播動作
+                    </div>
+                </div>
+
+                <!-- 階段 5 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(5)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">05</span> 變現矩陣佈局：廣告收益與多元被動收入</span>
+                        <i id="icon-5" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-5" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 除了廣告費 (AdSense)，你還能怎麼賺？盤點 5 種獲利模型<br>
+                        • 高 CPM (千次廣告單價) 秘密：如何讓同樣的觀看數賺更多錢<br>
+                        • 聯盟行銷與導購實戰：不露臉也能帶貨的邏輯<br>
+                        • 如何將觀眾轉化為私域流量，建立長尾銷售漏斗
+                    </div>
+                </div>
+
+                <!-- 階段 6 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(6)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">06</span> 數據驅動優化：讀懂後台核心指標與迭代</span>
+                        <i id="icon-6" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-6" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 別看無效數據！真正決定生死的 3 個後台指標<br>
+                        • 續看率 (Retention) 診斷：找出觀眾流失點並修正腳本<br>
+                        • A/B Testing 實戰：如何透過數據測試找出最佳封面<br>
+                        • 復活舊影片：用數據分析讓過氣影片重新獲得流量
+                    </div>
+                </div>
+
+                <!-- 階段 7 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(7)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">07</span> 自動化系統建構：外包協作與批量產出 SOP</span>
+                        <i id="icon-7" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-7" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 如何建立你的雲端工廠：從單打獨鬥到團隊協作<br>
+                        • 低成本外包攻略：去哪裡找剪輯、配音與寫手？<br>
+                        • 制定標準化 SOP：確保外包品質穩定的關鍵文件<br>
+                        • 量產思維：如何一週產出 7 支影片而不降低品質
+                    </div>
+                </div>
+
+                <!-- 階段 8 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center hover:bg-amber-50 transition" onclick="toggleAccordion(8)">
+                        <span class="text-lg font-bold text-slate-800"><span class="text-amber-500 mr-2">08</span> 資產護城河：版權規避與長期營運心法</span>
+                        <i id="icon-8" class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="content-8" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-600 leading-loose">
+                        • 做搬運/解說最怕的事：如何正確避開版權警告 (Copyright Strike)<br>
+                        • 合理使用 (Fair Use) 的邊界與申訴技巧<br>
+                        • 面對平台政策變動的生存法則與風險分散<br>
+                        • 心態建設：如何度過流量低谷期並持續獲利
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下單/報名區塊 -->
+    <section id="pricing" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row border border-white/10">
+                <div class="p-10 lg:p-16 flex-1 text-white">
+                    <div class="flex items-center space-x-2 text-amber-500 mb-6">
+                        <i class="fas fa-bolt"></i>
+                        <span class="font-black tracking-widest text-sm uppercase">LIMITED TIME OFFER</span>
+                    </div>
+                    <h2 class="text-4xl font-black mb-6 leading-tight">開啟你的<br>數位資產自動化之路</h2>
+                    <ul class="space-y-4 mb-8 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-3"></i> 終身觀看權限與未來課程更新</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-3"></i> 獨家不露臉頻道經營 SOP 工具包</li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-amber-500 mr-3"></i> Gmail 專屬親自顧問 (行行一對一解惑)</li>
+                    </ul>
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-5xl font-black text-amber-500 underline underline-offset-8">NT$ 8,880</span>
+                        <span class="text-gray-500 line-through text-xl">NT$ 19,800</span>
+                    </div>
+                    <p class="text-amber-500/80 text-sm mt-6 font-bold flex items-center">
+                        <i class="fas fa-clock mr-2"></i> 早鳥優惠倒數中，名額有限！
+                    </p>
+                </div>
+                <div class="p-10 lg:p-16 bg-white/5 backdrop-blur-xl flex flex-col justify-center items-center text-center border-l border-white/10">
+                    <div class="mb-10">
+                        <p class="text-gray-400 mb-2">這是你與財富自由最近的距離</p>
+                        <p class="text-white text-xl font-black italic">打造一個 24/7 賺錢機器</p>
+                    </div>
+                    <button onclick="showAlert()" class="accent-gradient w-full px-12 py-5 rounded-3xl text-white font-black text-2xl hover:shadow-amber-500/50 hover:shadow-2xl transition duration-500 transform active:scale-95 shadow-xl">
+                        立即領取課程
+                    </button>
+                    <div class="mt-8 flex gap-4 text-gray-500 opacity-60">
+                        <i class="fab fa-cc-visa text-2xl"></i>
+                        <i class="fab fa-cc-mastercard text-2xl"></i>
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-900 text-gray-300 py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+                <!-- 左側：品牌資訊 -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-6">
+                        <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                        <span class="text-2xl logo-font text-white italic">行行行銷</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                        致力於協助創作者與企業透過 YouTube 打造長期的數位資產。我們教你如何建立一個自動化賺錢的系統。
+                    </p>
+                </div>
+
+                <!-- 中間：快速連結 -->
+                <div class="text-center">
+                    <h4 class="text-white font-bold mb-6">快速連結</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#about" class="hover:text-amber-500 transition">關於行行</a></li>
+                        <li><a href="#method" class="hover:text-amber-500 transition">獲利策略</a></li>
+                        <li><a href="#pricing" class="hover:text-amber-500 transition">立即加入</a></li>
+                        <li><a href="https://www.youtube.com/@%E8%A1%8C%E8%A1%8C%E8%A1%8C%E9%8A%B7" target="_blank" class="hover:text-amber-500 transition">YouTube 頻道</a></li>
+                    </ul>
+                </div>
+
+                <!-- 右側：追蹤動態 -->
+                <div class="text-center md:text-right">
+                    <h4 class="text-white font-bold mb-6">追蹤動態</h4>
+                    <div class="flex justify-center md:justify-end space-x-5">
+                        <a href="https://www.youtube.com/@%E8%A1%8C%E8%A1%8C%E8%A1%8C%E9%8A%B7" target="_blank" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-red-600 transition border border-white/10 shadow-lg">
+                            <i class="fab fa-youtube text-white text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-blue-600 transition border border-white/10 shadow-lg">
+                            <i class="fab fa-facebook-f text-white text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 版權聲明 -->
+            <div class="mt-16 pt-8 border-t border-white/5 text-center">
+                <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">
+                    &copy; 2024 行行行銷 - ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 結帳彈窗 -->
+    <div id="alert-box" class="fixed inset-0 flex items-center justify-center z-[100] hidden p-4">
+        <div class="bg-black/90 absolute inset-0 backdrop-blur-md" onclick="closeAlert()"></div>
+        <div class="bg-slate-900 rounded-[2.5rem] p-10 max-w-sm w-full relative shadow-2xl text-center border border-white/10">
+            <div class="w-24 h-24 bg-amber-500/10 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 border border-amber-500/20">
+                <i class="fas fa-lock text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-black mb-2 text-white italic">即將開啟百萬收益</h3>
+            <p class="text-gray-400 mb-8 leading-relaxed">我們正在引導您前往加密安全結帳頁面...</p>
+            <div class="flex flex-col space-y-4">
+                <button onclick="location.reload()" class="accent-gradient text-white py-5 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition">確認報名 (NT$ 8,880)</button>
+                <button onclick="closeAlert()" class="text-gray-600 py-2 hover:text-gray-400 transition text-sm">先回首頁</button>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-<!-- 第五段：學員見證區 -->
-<section id="testimonials" style="background-color:#000; color:white; padding:80px 20px; text-align:center;">
-  <div style="max-width:1100px; margin:0 auto;">
 
-    <h2 style="font-size:2em; font-weight:800; color:#fff; margin-bottom:10px;">
-      股票心法投資班真的能讓人學會投資？
-    </h2>
-    <p style="font-size:1.3em; color:#f0a500; font-style:italic; margin-bottom:50px;">
-      我的學員來告訴你
-    </p>
+    <script>
+        // 手機選單切換
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px;">
+        // 點擊選單連結後自動關閉選單
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
 
-      <!-- 左邊學員 -->
-      <div style="flex:1; min-width:280px;">
-        <img src="assets/messageImage_1762762105827.jpg" alt="學員見證1"
-             style="width:100%; max-width:400px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.6);">
-      </div>
+        // 手風琴邏輯
+        function toggleAccordion(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
 
-      <!-- 右邊學員 -->
-      <div style="flex:1; min-width:280px;">
-        <img src="assets/messageImage_1762762101697.jpg" alt="學員見證2"
-             style="width:100%; max-width:400px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.6);">
-      </div>
-    </div>
-
-    <div style="margin-top:40px;">
-      <p style="font-size:1.2em; color:#6af5c2;">由影片加入的學員同樣受益</p>
-      <p style="font-size:1.3em; background:#3b2d00; color:#ffcc66; display:inline-block; padding:10px 20px; border-radius:6px;">
-        兩週獲利40%
-      </p>
-    </div>
-  </div>
-</section>
-<!-- 第六段：單圖 + 文字展示 -->
-<section id="single-showcase" style="background-color:#000; color:white; padding:80px 20px; text-align:center;">
-  <div style="max-width:900px; margin:0 auto;">
-
-    <div style="margin-bottom:30px;">
-      <img src="assets/messageImage_1762762830804.jpg" 
-           alt="學員獲利圖示" 
-           style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.6);">
-    </div>
-
-    <p style="font-size:1.4em; color:#d5bfff; font-weight:700; background:#1a0f2b; display:inline-block; padding:12px 20px; border-radius:6px;">
-      一週內獲利將近50%
-    </p>
-
-  </div>
-</section>
-<!-- 第六段：單圖 + 文字展示 -->
-<section id="single-showcase" style="background-color:#000; color:white; padding:80px 20px; text-align:center;">
-  <div style="max-width:900px; margin:0 auto;">
-
-    <div style="margin-bottom:30px;">
-      <img src="assets/messageImage_1762763105012.jpg" 
-           alt="學員獲利圖示" 
-           style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.6);">
-    </div>
-
-    <p style="font-size:1.4em; color:#d5bfff; font-weight:700; background:#1a0f2b; display:inline-block; padding:12px 20px; border-radius:6px;">
-      三天前買進獲利約15%
-    </p>
-
-  </div>
-</section>
-  <!-- 第六段：單圖 + 文字展示 -->
-<section id="single-showcase" style="background-color:#000; color:white; padding:80px 20px; text-align:center;">
-  <div style="max-width:900px; margin:0 auto;">
-
-    <div style="margin-bottom:30px;">
-      <img src="assets/messageImage_1762763178356.jpg" 
-           alt="學員獲利圖示" 
-           style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.6);">
-    </div>
-
-    <p style="font-size:1.4em; color:#d5bfff; font-weight:700; background:#1a0f2b; display:inline-block; padding:12px 20px; border-radius:6px;">
-      10天內賺30%
-    </p>
-
-  </div>
-</section>
-    <!-- 第六段：單圖 + 文字展示 -->
-<section id="single-showcase" style="background-color:#000; color:white; padding:80px 20px; text-align:center;">
-  <div style="max-width:900px; margin:0 auto;">
-
-    <div style="margin-bottom:30px;">
-      <img src="assets/messageImage_1762763224326.jpg" 
-           alt="學員獲利圖示" 
-           style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.6);">
-    </div>
-
-    <p style="font-size:1.4em; color:#d5bfff; font-weight:700; background:#1a0f2b; display:inline-block; padding:12px 20px; border-radius:6px;">
-      更多關於觀眾宏觀的投資心法，還有更多好評與支持，未能一一列出。
-    </p>
-
-  </div>
-</section>
-<!-- 第七段：你將獲得什麼 -->
-<section id="what-you-get" style="background:#000; color:#fff; padding:80px 20px; font-size:16px; line-height:1.9;">
-  <div style="max-width:1100px; margin:0 auto;">
-
-    <h2 style="text-align:center; font-size:1.8em; font-weight:800; margin-bottom:30px;">
-      在股票心法投資班內，你將獲得甚麼?
-    </h2>
-
-    <!-- 1 -->
-    <h3 style="font-size:1.15em; margin:20px 0 10px;">
-      <strong>1. 風險管控的能力</strong>
-      <span style="color:#ffcf6f;">（價值 USD 3,000）</span>
-    </h3>
-    <p>
-      在這個章節，你將學會在買入股票之前，先清楚掌握自己的風險與回報比，並熟練設定止盈與止損策略。
-      你還會了解如何有效控管風險，避免單筆失誤造成重大損失。掌握這些技巧，將決定你能否在股市中穩定、長期地獲利。
-    </p>
-
-    <!-- 2 -->
-    <h3 style="font-size:1.15em; margin:20px 0 10px;">
-      <strong>2. 入場關鍵時機</strong>
-      <span style="color:#98ffb2;">（價值 USD 4,000）</span>
-    </h3>
-    <p>
-      本章將專注於提升你的交易勝率，因為勝率越高，止損次數就越少、損失也更可控。
-      你將學會辨識最大概率暴漲的 VCP 股票形態，熟悉股票的六大類型，以及判斷市場見頂與見底的關鍵信號。
-      同時，你還會掌握如何鎖定並買進市場中的「領頭羊」股票，讓你在風險最低的情況下，抓住最具爆發力的投資機會。
-    </p>
-
-    <!-- 3 -->
-    <h3 style="font-size:1.15em; margin:20px 0 10px;">
-      <strong>3. 出場止損時機</strong>
-      <span style="color:#6fe2ff;">（價值 USD 5,000）</span>
-    </h3>
-    <p>
-      本章並非教你如何精準賣在最高點，而是教你如何嚴格執行事先規劃好的風險與回報計劃。
-      你將學會在買入股票之前，就制定完整的交易策略，包括何時止盈、何時止損、何時加倉、何時減倉，以及如何應對突發事件。
-      透過這套方法，你能確保長期穩定地利用複利增值，同時避免資金被套牢與利潤回吐，真正做到穩健獲利。
-    </p>
-
-    <!-- 4 -->
-    <h3 style="font-size:1.15em; margin:20px 0 10px;">
-      <strong>4. 公式化的控制資金</strong>
-      <span style="color:#ffcf6f;">（價值 USD 3,000）</span>
-    </h3>
-    <p>
-      你不會用 100 萬美金孤注一擲買進一檔股票，但同樣也不會將 100 萬分散投資在 100 檔股票，
-      因為這樣要嘛讓風險極度集中、要嘛過度分散導致收益被稀釋。最糟的情況是，一次虧光所有資金，或長期都賺不到理想的利潤。
-      在本章，你將深入掌握我們的持倉策略，學會如何在確保利潤最大化的同時，做到合理分散風險。
-      這讓你既能抓住暴漲股的上升行情，也能在市場震盪與洗盤時將損失降到最低，實現穩健與爆發兼具的投資組合。
-    </p>
-
-    <!-- 5 -->
-    <h3 style="font-size:1.15em; margin:20px 0 10px;">
-      <strong>5. AI 自動選股買賣操作</strong>
-      <span style="color:#98ffb2;">（價值 USD 3,000）</span>
-    </h3>
-    <p>
-      本系統讓你無需長時間盯盤，也能高效執行交易。我們將教你如何在選股網站中快速篩選標的、
-      設定專屬的技術指標，並讀懂關鍵圖表訊號。透過這套流程，你每天只需花約 45 分鐘，就能完成大盤分析、
-      股票篩選與策略設定，輕鬆維持高效率與精準度，同時釋放更多時間去享受生活。
-    </p>
-
-    <!-- 6 -->
-    <h3 style="font-size:1.15em; margin:20px 0 10px;">
-      <strong>6. 股票心態終章</strong>
-      <span style="color:#6fe2ff;">（價值 USD 5,000）</span>
-    </h3>
-    <p>
-      前面學到的都是「術」，也就是技術層面的操作，而真正能讓你長期贏錢的關鍵，是「心法」。
-      這涵蓋了投資者的思維模式與情緒管理，屬於「道」的層面。沒有正確的心態，即使技術再好，
-      也可能因為恐懼、貪婪或急躁而讓原本的獲利化為虧損。本章將帶你建立股票投資必備的心態基礎，
-      讓你的技術與心態相輔相成，實現穩健持續的獲利。
-    </p>
-
-    <!-- 總表 -->
-    <div style="margin:28px 0; padding:18px 20px; background:#0f0f0f; border-radius:8px;">
-      <div style="color:#bbb">
-        <strong>1.</strong> 風險管控的能力（價值 USD 3,000）<br>
-        <strong>2.</strong> 入場關鍵時機（價值 USD 4,000）<br>
-        <strong>3.</strong> 出場止損時機（價值 USD 5,000）<br>
-        <strong>4.</strong> 公式化的控制資金（價值 USD 3,000）<br>
-        <strong>5.</strong> AI 自動選股買賣操作（價值 USD 3,000）<br>
-        <strong>6.</strong> 股票心態終章（價值 USD 5,000）
-      </div>
-      <div style="height:1px; background:#555; margin:16px 0 0;"></div>
-    </div>
-
-    <!-- 價格 -->
-    <div style="text-align:left; margin-top:10px;">
-      <p style="color:#ddd; font-weight:700;">
-        總價值： <span style="text-decoration:line-through; color:#aaa;">$23,000 USD</span>
-      </p>
-      <p style="color:#ff6b6b; font-weight:900; font-size:1.3em; margin-top:6px;">
-        限時優惠價：<span>998 USD</span>
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- 第八段：付款方式 + 注意事項 -->
-<section id="payment" style="background:#000; color:#fff; padding:60px 20px; font-size:16px; line-height:1.9;">
-  <div style="max-width:1000px; margin:0 auto;">
-
-    <h3 style="font-size:1.35em; font-weight:800; margin-bottom:12px;">我可以怎樣付款？</h3>
-    <p>我們提供 6 種付款方式，方便您完成購買：</p>
-    <ol style="padding-left:22px; margin-top:6px;">
-      <li><strong>信用卡</strong></li>
-      <li>Apple Pay</li>
-      <li>Google Pay</li>
-      <li><strong>微信</strong></li>
-      <li><strong>支付寶</strong></li>
-      <li><strong>銀行轉帳</strong></li>
-    </ol>
-
-    <div style="height:1px; background:#555; margin:24px 0;"></div>
-
-    <h4 style="font-size:1.1em; font-weight:800;">信用卡注意事項</h4>
-    <ul style="padding-left:20px; color:#ddd;">
-      <li>部分信用卡公司會以地址驗證持卡人身份，請確保填寫的居住地址與銀行登記的完全相同。</li>
-      <li>地址僅供信用卡公司驗證，不會寄送任何實體郵件。</li>
-      <li>暫不支援 Debit 卡、台灣公車卡、JCB。</li>
-    </ul>
-    <p style="margin-top:10px;">
-      若有任何問題請聯繫 Email：
-      <a href="mailto:hanghang66@gmail.com" style="color:#9ad4ff; text-decoration:underline;">hanghang66@gmail.com</a>，
-      將有專人協助您完成付款。
-    </p>
-
-  </div>
-</section>
-
-<!-- 第九段：常見問題 -->
-<section id="faq" style="background:#000; color:#fff; padding:60px 20px; font-size:16px; line-height:1.9;">
-  <div style="max-width:1000px; margin:0 auto;">
-
-    <h2 style="text-align:left; font-size:1.6em; font-weight:800; margin-bottom:18px;">常見問題</h2>
-
-    <h3 style="font-size:1.1em; font-weight:800;">股票投資心法課可以保證我成功嗎？</h3>
-    <p>
-      我們提供的不是什麼快速致富的途徑，而是明確的目標、經過驗證的實現路徑與腳踏實地的積累。
-      就像沒有老師會保證你「只要跟他學就能上哈佛」一樣，我能保證的是內容一定是
-      經過實操驗證有效的策略與方法，幫你少走彎路；但最終關鍵仍是你的自律與執行。
-    </p>
-
-    <h3 style="font-size:1.1em; font-weight:800;">誰不適合加入課程？</h3>
-    <p>
-      如果你只想不勞而獲，或沒有足夠行動力與自律去履行這件事，不建議報名。
-      當你不甘於現狀、決心相信自媒體／系統化投資是一條可長可久的道路，本課程才能真正幫助你。
-      永遠不要設限，你能達到的遠比自己想像更多。
-    </p>
-
-    <h3 style="font-size:1.1em; font-weight:800;">課程有上課時間嗎？課程有期限嗎？</h3>
-    <p>
-      課程沒有規定上課時間，購買後為終身可存取。你可以自由安排時間、隨時隨地觀看內容；
-      我也會持續更新最新內容，讓你能和課程一起成長。
-    </p>
-
-    <h3 style="font-size:1.1em; font-weight:800;">你們有退款政策嗎？</h3>
-    <p>
-      本產品加入後即為終身會員，可終身使用系統工具與課程。由於系統工具、SOP、模板與內容屬一次性交付，
-      交付後無法退回，也無法退款；請務必確認這是你需要的產品再購買。
-    </p>
-
-    <p style="margin-top:14px;">
-      若你對課程還有問題，歡迎來信：
-      <a href="mailto:hanghangxx@gmail.com" style="color:#9ad4ff; text-decoration:underline;">hanghangxx@gmail.com</a>
-    </p>
-
-  </div>
-</section>
-<!-- 第十段：頁尾 Footer -->
-<footer style="background-color:#000; color:#ccc; padding:60px 20px; text-align:center; font-size:14px; line-height:1.8;">
-  <div style="max-width:1000px; margin:0 auto;">
-
-    <p style="color:#bbb; margin-bottom:15px;">2025 © 行行行銷授權提供</p>
-
-    <p style="color:#aaa; margin-bottom:15px;">
-      此網站不是 Facebook 網站或 Facebook Inc. 的一部分。 此外，此網站未經 Facebook 以任何方式認可。FACEBOOK 是 FACEBOOK, Inc 的商標。
-    </p>
-
-    <p style="color:#aaa; margin-bottom:20px;">
-      免責聲明：行行行銷課程上的任何內容並非亦不應被視為投資建議。內容只作為資料性及一般用途，它並沒有考慮您的個人需要、投資目標及特定財政狀況。
-      因此課程內容只供參考，並不構成投資行動的邀請、建議、推廣或建議購買或賣出內容之準確性、完整性、適時性，掃地僧不作出任何聲明或保證。
-      並不負上或承擔任何向任何人士就投資者作出建議的責任，亦不會就任何因為或與該等內容使用有關的損失作出負責。
-      投資者在作出任何投資或購買任何產品的決定前，應自行查閱相關產品的資料。<br>
-      如有任何問題，請通過 <a href="mailto:hanghangx66@gmail.com" style="color:#66ccff; text-decoration:underline;">hanghangx66@gmail.com</a> 聯繫我們。
-    </p>
-
-    <hr style="border:none; border-top:1px solid #333; margin:30px auto; width:80%;">
-
-    <p style="color:#aaa; text-align:left;">
-      DISCLAIMER: The contents of any of the courses offered by hanghang are not and should not be considered as investment advice.
-      The course content is for informational and general purposes only and it does not take into account your individual needs, investment objectives
-      and specific financial situation. The course content is therefore for information purposes only and does not constitute an offer, invitation,
-      recommendation or solicitation to take any action. hanghang does not make any representation or warranty as to the accuracy,
-      completeness, timeliness or precision of the contents. It does not assume or accept any responsibility for making any recommendations
-      to any person or investor and shall not be liable for any direct, indirect or consequential losses arising out of or in connection with the use
-      of or reliance on the contents of the course. Investors should check the information of the relevant products before making any investment
-      or purchase decision. If you have any questions, please contact us at
-      <a href="mailto:hanghangx66@gmail.com" style="color:#66ccff; text-decoration:underline;">hanghangx66@gmail.com</a>
-    </p>
-
-  </div>
-</footer>
-
+        // 彈窗邏輯
+        function showAlert() {
+            document.getElementById('alert-box').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeAlert() {
+            document.getElementById('alert-box').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
 </body>
 </html>
